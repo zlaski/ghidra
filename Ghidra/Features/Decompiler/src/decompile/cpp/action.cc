@@ -567,7 +567,7 @@ int4 ActionRestartGroup::apply(Funcdata &data)
       return 0;
     curstart += 1;
     if (curstart > maxrestarts) {
-      data.warningHeader("Exceeded maximum restarts with more pending");
+      data.warningHeader("Exceeded maximum restarts (" + std::to_string(maxrestarts) + ") with more pending");
       curstart = -1;
       return 0;
     }
